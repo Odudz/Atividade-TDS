@@ -1,5 +1,6 @@
 var db = {acc: []}
 
+// Accountant login & creation
 function login(){
     var name = (document.getElementById('nome').value).toLowerCase()
     var password = document.getElementById('senha').value
@@ -32,7 +33,7 @@ function createAccountant(name,password){
 
     if(searchName(name,0) === false){
         name = name.toLowerCase()
-        const acc = [name,password]
+        const acc = [name,password,{}]
 
         db.acc.push(acc)
     } else {
@@ -40,6 +41,28 @@ function createAccountant(name,password){
     }
 }
 
+// Change password visibility
+
+var visibility = 0
+
+function changeVisibility(){
+    var eye = document.getElementById('eye')
+    var password = document.getElementById('senha')
+
+    visibility++
+
+    if(visibility === 1){
+        eye.src = "/imagens/eye.png"
+        password.setAttribute('type', 'text')
+    } else {
+        eye.src = "/imagens/closedEye.png"
+        password.setAttribute('type', 'password')
+        visibility = 0
+    }
+
+}
+
+// Saving and loading functions
 function saveDb(){
     localStorage.setItem('db',JSON.stringify(db))
 }
