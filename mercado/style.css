@@ -1,6 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-body{
-    background-image: url("/imagens/hellokitty.jpeg");
+body {
+    background-image: url(/imagens/hellokitty.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -11,5 +17,96 @@ body{
     justify-content: center;
     min-height: 100vh;
     height: auto;
-    scrollbar: none;
+    padding: 20px;
 }
+
+/* Item cards */
+
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: whitesmoke;
+    background-color: black;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .item-card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .item-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  .item-description {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0 0 6px;
+  }
+
+  .item-price {
+    font-size: 1em;
+    color: #4CAF50;
+    margin-bottom: 12px;
+  }
+
+  .item-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .add-button {
+    flex: 1;
+    padding: 8px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .add-button:hover {
+    background-color: #c2185b;
+  }
+
+  .btn-voltar{
+    color: #e91e63;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    
+  }
+  
+  .btn-carrinho{
+    color: #e91e63;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    position: absolute;
+    top: 30px;
+    left: 200px;
+    
+  }

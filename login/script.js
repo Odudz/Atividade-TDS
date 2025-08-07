@@ -1,4 +1,4 @@
-var db = {acc: []}
+var db = {user: 0,acc: []}
 
 // Accountant login & creation
 function login(){
@@ -9,8 +9,11 @@ function login(){
     if(searchName(name) !== false){
         if(password === db.acc[searchName(name)][1]){
 
-            window.location.href = '/mercado/index.html'
+            db.user = searchName(name)
+            console.log(db.user)
             console.log('You logged in!')
+            saveDb()
+            window.location.href = '/mercado/index.html'
         } else {
             console.log('This password is wrong!')
         }

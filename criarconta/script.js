@@ -1,4 +1,4 @@
-var db = {acc: []}
+var db = {user: 0,acc: []}
 
 function searchName(name){
 
@@ -22,7 +22,7 @@ function createAccountant(){
         if(searchName(name,0) === false){
             if(password === verifyPassword){
                 name = name.toLowerCase()
-                const acc = [name,password,{}]
+                const acc = [name,password,[]]
 
                 db.acc.push(acc)
                 console.log("You created a accountant!")

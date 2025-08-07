@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url(/imagens/hellokitty.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  color: rgb(20, 9, 9);
+}
+
+#cart {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px;
+  max-width: 960px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.item-card {
+  width: 300px; 
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+
+.item-description {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+
+.item-price {
+  font-size: 1em;
+  color: #4caf50;
+  margin-bottom: 12px;
+}
+
+.item-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-button {
+  padding: 8px 12px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #c2185b;
+}
+
+#cart p {
+  color: rgb(245, 245, 245);
+  font-size: 1.2em;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-voltar{
+  color: #e91e63;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  
+}
