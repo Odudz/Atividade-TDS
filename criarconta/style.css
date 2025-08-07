@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url(/imagens/hellokitty.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    height: auto;
+}
+
+.container {
+    position: relative;
+    background-color: rgba(240, 255, 255, 0.614);
+    width: 300px;
+    height: 400px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: black 0px 8px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.round {
+    background-color: chocolate;
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid rgb(0, 0, 0);
+    position: absolute;
+    top: -1%;
+    left: 50%;
+    box-shadow: #090909 0px 8px 24px;
+    transform: translate(-50%, -50%);
+}
+
+.round i {
+    font-size: 70px;
+    color: black;
+}
+
+.wrap-input-label {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    width: 80%;
+    position: relative;
+}
+
+.eye {
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+    opacity: 0.7;
+}
+
+.eye:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.wrap-input-label label{
+    color: #090909;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.wrap-input-label input{
+    background-color: transparent;
+    padding: 8px 0px;
+    border: none;
+    width: 100%;
+    border-bottom: 2px solid #090909;
+    font-size: 18px;
+    color: #000;
+}
+
+input::placeholder{
+    color: #090909;
+    font-size: 16px;
+}
+
+input:focus{
+    border: none;
+    outline: none;
+    color: #da7305;
+    font-size: 16px;
+    border-bottom: 2px solid #da7305;
+}

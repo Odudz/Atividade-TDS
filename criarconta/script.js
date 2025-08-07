@@ -1,23 +1,5 @@
 var db = {acc: []}
 
-// Accountant login & creation
-function login(){
-    var name = (document.getElementById('nome').value).toLowerCase()
-    var password = document.getElementById('senha').value
-    
-
-    if(searchName(name) !== false){
-        if(password === db.acc[searchName(name)][1]){
-
-            window.location.href = '/mercado/index.html'
-            console.log('You logged in!')
-        } else {
-            console.log('This password is wrong!')
-        }
-    }
-
-}
-
 function searchName(name){
 
     name = name.toLowerCase()
@@ -31,15 +13,28 @@ function searchName(name){
     return false
 }
 
-function createAccountant(name,password){
+function createAccountant(){
+    var name = document.getElementById('nome').value
+    var password = document.getElementById('senha').value
+    var verifyPassword = document.getElementById('verifySenha').value
 
-    if(searchName(name,0) === false){
-        name = name.toLowerCase()
-        const acc = [name,password,{}]
+    if(name && password && verifyPassword !== ''){
+        if(searchName(name,0) === false){
+            if(password === verifyPassword){
+                name = name.toLowerCase()
+                const acc = [name,password,{}]
 
-        db.acc.push(acc)
-    } else {
-        console.log('A accountant with this name already exists')
+                db.acc.push(acc)
+                console.log("You created a accountant!")
+
+                saveDb()
+                window.location.href = '/login/index.html'
+            } else {
+                console.log("The passwords dont match!")
+            }
+        } else {
+            console.log('A accountant with this name already exists')
+        }
     }
 }
 
@@ -77,4 +72,4 @@ function loadDb(){
 }
 
 window.onload = loadDb()
-setInterval(saveDb,1000)    
+setInterval(saveDb,1000)

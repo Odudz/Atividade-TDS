@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Criar conta</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -30,11 +30,14 @@
             <div onclick="changeVisibility()">
                 <img class="eye" src="/imagens/closedEye.png" alt="olho" id="eye">
             </div>
+            <label for="verifySenha">Verificar senha</label>
+            <input type="password" id="verifySenha" placeholder="Insira sua senha">
+            <div onclick="changeVisibility()">
+                <img class="eye" src="/imagens/closedEye.png" alt="olho" id="eye">
+            </div>
         </div>
 
-        <p>esqueci minha senha</p>
-        <button class="btn-login" onclick="login()">Login</button>
-        <button class="btn-registro" onclick = "window.location.href = '/criarconta/index.html' ">Registrar conta</button>
+        <button class="btn-login" onclick="createAccountant()">Criar conta</button>
 
     </div>
 

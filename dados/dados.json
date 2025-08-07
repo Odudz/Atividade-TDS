@@ -1,0 +1,62 @@
+[
+{
+  "id": 1,
+  "descricao": "Banana rosa da hello kitty'",
+  "imagem": "/imagens/Sorvete-hk.jpg",
+  "preco": 5.0
+},
+{
+  "id": 2,
+  "descricao": "Morango rosa da hello kitty",
+  "imagem": "/imagens/Sorvete-hk.jpg",
+  "preco": 10.0
+},
+{
+  "id": 3,
+  "descricao": "Maca rosa da hello kitty",
+  "imagem": "/imagens/Sorvete-hk.jpg",
+  "preco": 2.5
+},
+{
+  "id": 4,
+  "descricao": "Blueberry rosa da hello kitty",
+  "imagem": "/imagens/Sorvete-hk.jpg",
+  "preco": 4.0
+},
+{
+  "id": 5,
+  "descricao": "Framboesa rosa da hello kitty",
+  "imagem": "/imagens/Sorvete-hk.jpg",
+  "preco": 4.0
+},
+{
+  "id": 6,
+  "descricao": "Gelatina rosa da hello kitty",
+  "imagem": "/imagens/Sorvete-hk.jpg",
+  "preco": 15.0
+},
+{
+  "id": 7,
+  "descricao": "Sorvete rosa da hello kitty",
+  "imagem": "/imagens/Sorvete-hk.jpg",
+  "preco": 12.0
+},
+{
+  "id": 8,
+  "descricao": "Pirulito rosa da hello kitty",
+  "imagem": "/imagens/Sorvete-hk.jpg",
+  "preco": 1.50
+},
+{
+  "id": 9,
+  "descricao": "Cupcake rosa da hello kitty",
+  "imagem": "/imagens/Sorvete-hk.jpg",
+  "preco": 20.0
+},
+{
+  "id": 10,
+  "descricao": "Petit Gateau rosa da hello kitty",
+  "imagem": "/imagens/Sorvete-hk.jpg",
+  "preco": 50.0
+}
+]
