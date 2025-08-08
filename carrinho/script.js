@@ -23,13 +23,12 @@ function ensureUserAccount() {
 }
 
 function renderCart() {
-  console.log("Hi")
     const cartDiv = document.getElementById("cart");
     const items = db.acc[db.user][2];
     cartDiv.innerHTML = "";
 
     if (items.length === 0) {
-      cartDiv.innerHTML = "<p style='color:white; font-size:1.2em;'>Your cart is empty.</p>";
+      cartDiv.innerHTML = "<p style='color:white; font-size:2.5em; background-color: grey; border-radius: 25px'>Seu carrinho está vazio</p>";
       return;
     }
 
@@ -42,7 +41,7 @@ function renderCart() {
         <h3 class="item-description">${item.descricao}</h3>
         <p class="item-price">Preço: R$ ${item.preco.toFixed(2)}</p>
         <div class="item-actions">
-          <button class="add-button" onclick="removeItem(${item.id})">Remove</button>
+          <button class="add-button" onclick="removeItem(${item.id})">Remover</button>
         </div>
       `;
 

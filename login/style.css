@@ -35,7 +35,7 @@ body {
 }
 
 .round {
-    background-color: chocolate;
+    background-color: rgb(227, 34, 204);
     width: 125px;
     height: 125px;
     border-radius: 100%;
