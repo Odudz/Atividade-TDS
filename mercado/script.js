@@ -1,25 +1,39 @@
-var db = {user: 0,acc: []}
+var db = { user: 0, acc: [] };
 
 // Saving and loading functions
-function saveDb(){
-  localStorage.setItem('db',JSON.stringify(db))
+function saveDb() {
+  localStorage.setItem('db', JSON.stringify(db));
 }
-function loadDb(){
 
-  var data = JSON.parse(localStorage.getItem('db'))
-  if(localStorage.getItem('db') !== null){
-      db = data
+function loadDb() {
+  const data = JSON.parse(localStorage.getItem('db'));
+  if (data !== null) {
+    db = data;
   }
 }
 
-window.onload = loadDb()
-setInterval(saveDb,1000) 
+window.onload = loadDb;
+setInterval(saveDb, 1000);
 
 // Ensure db.acc[db.user] exists
 function ensureUserAccount() {
   if (!db.acc[db.user]) {
     db.acc[db.user] = [];
   }
+  if (!Array.isArray(db.acc[db.user][2])) {
+    db.acc[db.user][2] = [];
+  }
+}
+
+// Toast function
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
 }
 
 // Create item cards
@@ -48,14 +62,13 @@ fetch('/dados/dados.json')
         </div>
       `;
 
-      // Add to container
       container.appendChild(card);
 
-      // Add click event to button
       const addButton = card.querySelector('.add-button');
       addButton.addEventListener('click', () => {
-        ensureUserAccount(); // Make sure user's array exists
-        db.acc[db.user][2].push(item); // Add item to user cart
+        ensureUserAccount();
+        db.acc[db.user][2].push(item); // Add to cart
+        showToast(`'${item.descricao}' foi adicionado ao carrinho`);
         console.log(`Item adicionado: ${item.descricao}`);
       });
     });
